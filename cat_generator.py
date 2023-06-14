@@ -42,7 +42,6 @@ final_url = url()
 response = requests.get(final_url)
 if response.status_code == 200:
     print("Displaying Content")
-    # print(response.content())
     img = Image.open(BytesIO(response.content))
     img.show()
 else:
